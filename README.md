@@ -123,3 +123,4 @@ This project is licensed under the MIT License — see the LICENSE file for deta
 
 - [libwebp](https://developers.google.com/speed/webp/docs/using) — WebP encoding library
 - [WebAssembly](https://webassembly.org/) — For enabling high-performance web applications
+- [WebP Icon](https://github.com/iconoir-icons/iconoir) — WebP SVG icon by Luca Burgio
