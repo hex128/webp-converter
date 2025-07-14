@@ -177,14 +177,18 @@ selectFilesBtn.addEventListener('click', () => fileInput.click());
 fileInput.addEventListener('change', e => handleFiles(e.target.files));
 
 // Quality slider
-qualitySlider.addEventListener('input', e => {
-  qualityValue.textContent = e.target.value;
-});
+function handleQualitySliderChange() {
+  qualityValue.textContent = qualitySlider.value;
+}
+qualitySlider.addEventListener('input', handleQualitySliderChange);
+handleQualitySliderChange();
 
 // Resize checkbox
-resizeCheckbox.addEventListener('change', e => {
-  resizeOptions.style.display = e.target.checked ? 'block' : 'none';
-});
+function handleResizeToggle() {
+  resizeOptions.style.display = resizeCheckbox.target.checked ? 'block' : 'none';
+}
+resizeCheckbox.addEventListener('change', handleResizeToggle);
+handleResizeToggle();
 
 // Convert button
 convertBtn.addEventListener('click', convertImages);
