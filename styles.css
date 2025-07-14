@@ -65,6 +65,7 @@ button:hover {
 button:disabled {
     background-color: #95a5a6;
     cursor: not-allowed;
+    color: #c5d5d6;
 }
 
 .settings {
@@ -223,7 +224,7 @@ input[type="number"] {
 
     button:disabled {
         background-color: #555;
-        color: #ccc;
+        color: #aaa;
     }
 
     .settings {
