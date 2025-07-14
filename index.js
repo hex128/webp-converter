@@ -192,9 +192,11 @@ handleResizeToggle();
 
 // Convert button
 convertBtn.addEventListener('click', convertImages);
+convertBtn.disabled = true;
 
 // Download all button
 downloadAllBtn.addEventListener('click', downloadAllImages);
+downloadAllBtn.disabled = true;
 
 // Drag and drop events
 dropZone.addEventListener('dragover', e => {
@@ -408,6 +410,8 @@ function downloadImage(index) {
   const link = document.createElement('a');
   link.href = convertedImage.url;
   link.download = convertedImage.filename;
+  link.rel = 'noopener noreferrer';
+  link.style.display = 'none';
 
   // Trigger the download
   document.body.appendChild(link);

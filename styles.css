@@ -117,6 +117,9 @@ input[type="number"] {
 }
 
 .image-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: hidden;
@@ -127,15 +130,19 @@ input[type="number"] {
     width: 100%;
     height: auto;
     display: block;
+    flex-shrink: 0;
 }
 
 .image-info {
+    flex: 1 1 auto;
     padding: 10px;
     background-color: #f9f9f9;
     border-top: 1px solid #ddd;
+    overflow-y: auto;
 }
 
 .image-actions {
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     padding: 10px;
