@@ -185,7 +185,7 @@ handleQualitySliderChange();
 
 // Resize checkbox
 function handleResizeToggle() {
-  resizeOptions.style.display = resizeCheckbox.target.checked ? 'block' : 'none';
+  resizeOptions.style.display = resizeCheckbox.checked ? 'block' : 'none';
 }
 resizeCheckbox.addEventListener('change', handleResizeToggle);
 handleResizeToggle();
