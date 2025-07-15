@@ -5,6 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build:wasm": "chmod +x build-wasm.sh && ./build-wasm.sh",
-    "build": "npm run build:wasm && mkdir -p dist && cp *.html *.css *.js *.wasm dist/"
+    "build": "npm run build:wasm && mkdir -p dist && cp *.html *.css *.js *.wasm *.png *.ico *.svg manifest.json dist/"
   }
 }
