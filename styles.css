@@ -1,6 +1,6 @@
 :root {
     --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --bg-main: #f5f5f5;
+    --bg-main: hsl(229, 56%, 46%);
     --text-main: #333;
     --text-light: #666;
     --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -21,6 +21,7 @@ html, body {
 }
 
 body {
+    min-width: 320px;
     color: var(--text-main);
     line-height: 1.6;
     padding: 20px;
@@ -28,12 +29,23 @@ body {
 }
 
 .container {
+    min-width: 320px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
     background: linear-gradient(180deg, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 0;
+        background: var(--bg-main);
+    }
+    .container {
+        border-radius: 0;
+    }
 }
 
 h1 {
@@ -152,7 +164,7 @@ input[type="number"] {
 }
 
 input[type="range"] {
-    width: 200px;
+    max-width: 200px;
     vertical-align: middle;
 }
 
@@ -266,6 +278,7 @@ input[type="number"] {
 /* Dark mode overrides */
 @media (prefers-color-scheme: dark) {
     :root {
+        --bg-main: hsl(270, 37%, 46%);
         --text-main: #eee;
         --text-light: #aaa;
         --bg-glass: rgba(46, 46, 46, 0.67);
