@@ -38,8 +38,19 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 30px;
     color: #2c3e50;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+}
+
+h2 a {
+    color: inherit;
 }
 
 .drop-zone, .settings, .image-item {
