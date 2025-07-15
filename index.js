@@ -122,7 +122,7 @@ function processConvertedImage(index, webpData) {
     const imageActions = document.createElement('div');
     imageActions.className = 'image-actions';
     imageActions.innerHTML = `
-      <button class="download-btn" data-index="${convertedImages.length - 1}">Download</button>
+      <button class="download-btn download" data-index="${convertedImages.length - 1}">Download</button>
     `;
     imageItem.appendChild(imageActions);
 
@@ -331,6 +331,7 @@ async function convertImages() {
 
   // Disable the convert button during conversion
   convertBtn.disabled = true;
+  downloadAllBtn.disabled = true;
 
   // Get the quality value
   const quality = parseInt(qualitySlider.value, 10);
